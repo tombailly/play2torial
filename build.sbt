@@ -17,4 +17,6 @@ libraryDependencies += "org.webjars" % "jquery" % "1.11.2"
 
 libraryDependencies += "org.webjars" % "bootstrap" % "2.1.1"
 
+libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+
 PlayKeys.playWatchService := play.sbtplugin.run.PlayWatchService.sbt(pollInterval.value)
