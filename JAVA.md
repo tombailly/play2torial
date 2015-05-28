@@ -292,34 +292,6 @@ git diff upstream/java-hello_view
 ```
 
 
-Deploy your app on the Cloud with Heroku
-----------------------------------------
-
-Deploying your Play app on the cloud is easy with Heroku!
-
-1. [Install the Heroku Toolbelt](http://toolbelt.heroku.com)
-2. [Signup for a free Heroku account](http://heroku.com/signup)
-3. Login to Heroku from the command line:
-
-        heroku login
-
-4. Provision a new application on Heroku:
-
-        heroku create
-
-5. Push the application to Heroku:
-
-        git push heroku master
-
-Heroku will build the app with sbt and then run it on a [dyno](https://devcenter.heroku.com/articles/dynos).
-
-Open the application, now running on the cloud, in your browser:
-
-    heroku open
-
-The page should say `HELLO, WORLD` but will look different from what you see locally since the `play20.welcome` template our app is using, displays different stuff depending on whether you are running in `DEV` or `PROD` mode.  To run locally in `PROD` mode, stop the `activator ~run` process and instead run `activator start`.  This mode does not do any auto-reloading.
-
-
 Create a Model
 --------------
 
@@ -675,45 +647,7 @@ git commit -am "Add validation"
 git diff upstream/java-validation
 ```
 
-
-Update the App on Heroku
-------------------------
-
-Heroku provides each application with a small, free PostgreSQL database.  To switch the application to use that database only when it's running on Heroku, two small changes need to be made.
-
-First, add the PostgreSQL database driver as a dependency by adding the following to the `build.sbt` file:
-
-```scala
-
-libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
-```
-
-Note: Make sure you have an empty line before the line above.
-
-Create a new file named `Procfile` (make sure to capitalize the "P") in order to override the default database settings when Heroku runs the app:
-
-    web: target/universal/stage/bin/play2torial -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=$DATABASE_URL
-
-
-Commit and verify your changes:
-
-```sh
-git commit -am "Updates for PostgreSQL on Heroku"
-git diff upstream/java-heroku_update
-```
-
-Push your updates to Heroku:
-
-    git push heroku master
-
-
-View your app on the cloud:
-
-    heroku open
-
-_Read more about [Play on Heroku](https://www.playframework.com/documentation/2.3.x/ProductionHeroku)_
-
 Congratulations!
 ----------------
 
-You've built a Play 2.3 app and deployed it on the cloud.  You've learned how to get started with Play 2.3, Ebean, CoffeeScript, Twitter Bootstrap, jQuery, RESTful JSON services, and Heroku.  Have fun as you continue to learn Play 2.3!
+You've built a Play 2.3 app and deployed it on the cloud.  You've learned how to get started with Play 2.3, Ebean, CoffeeScript, Twitter Bootstrap, jQuery, and RESTful JSON services.  Have fun as you continue to learn Play 2.3!
