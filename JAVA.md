@@ -49,13 +49,13 @@ Fetch the remote repository:
 
     git fetch upstream
 
+Note: Because the Play! folks have released a new version of Play (2.4) which is a radical change from the prior version (2.3), rather than trying to keep things in sync, we're 'faking' things by letting you sync up with the version of Play that we use at SoFi by
+making your project be identical to the version in the tutorial.
 
-Now validate that your local project is correct by running:
+    git reset --hard upstream/java-new_project
 
-    git diff upstream/java-new_project
 
-Note: The `application.secret` config value will be different and that is fine.  Also sometimes git will tell you something is different even though it looks the same.  This will likely be due to differences in indentation and newlines.  You can ignore these differences.
-
+From this point forward, you will no longer be using activator, and instead you will be using sbt.
 
 
 Set up an IDE
@@ -66,7 +66,7 @@ Before we take a tour of the app you can optionally generate project files for E
 
 For Eclipse run:
 
-    activator eclipse
+    sbt eclipse
 
 For IntelliJ, install the Scala IntelliJ Plugin and then open the project's `build.sbt` file from the `File > Open...` dialog.
 
@@ -78,7 +78,7 @@ Start the Play Server
 
 Now start the Play app by running:
 
-    activator ~run
+    sbt ~run
 
 Open the following URL in your browser to verify the app is working:  
 [http://localhost:9000/](http://localhost:9000/)
@@ -142,7 +142,7 @@ public class FooTest extends WithApplication {
 
 That simple test will simulate a call to `/foo` and validate that the result was not null.  Run the test (you can keep the Play server running in another window):
 
-    activator test
+    sbt test
 
 
 You should see something similiar to:
@@ -181,7 +181,7 @@ This change will break two of the existing tests so change the `Your new applica
 
 To verify the tests pass, run:
 
-    activator test
+    sbt test
 
 Commit and verify that your changes:
 
@@ -208,7 +208,7 @@ You can do tests against a controller by simply creating a new JUnit Test.  Add 
 
 This simulates a request to the `Application.index()` controller method and verifies that the response is what we expect.  Run the test:
 
-    activator test
+    sbt test
 
 
 You should see something like:
@@ -280,7 +280,7 @@ The `test/IntegrationTest.java` does an integration test by starting a Play serv
 
 Run the tests and verify they all pass:
 
-    activator test
+    sbt test
 
 _Read more about [Templating](https://www.playframework.com/documentation/2.3.x/JavaTemplates) and [Template Use Cases](https://www.playframework.com/documentation/2.3.x/JavaTemplateUseCases)_
 
@@ -358,7 +358,7 @@ public class TaskTest {
 
 Run the tests and make sure all four pass:
 
-    activator test
+    sbt test
 
 
 Ebean will automatically create a new database evolution script for you in a file named `conf/evolutions/default/1.sql`.
@@ -444,7 +444,7 @@ After adding a new `Task` load the following URL in your browser:
 [http://localhost:9000/tasks](http://localhost:9000/tasks)
 
 
-Verify that you see a Task (or Tasks) in JSON form.  If the `contents` property in the JSON is null, then stop the `activator ~run` process, run `activator clean` and then run the app again: `activator ~run`
+Verify that you see a Task (or Tasks) in JSON form.  If the `contents` property in the JSON is null, then stop the `activator ~run` process, run `sbt clean` and then run the app again: `sbt ~run`
 
 
 Commit and verify your changes:
@@ -465,7 +465,7 @@ Add the jQuery WebJar to your project by adding the following to your `build.sbt
 
 Note: Make sure you have an empty line before the line above.
 
-Restart the `activator ~run` process to reload the dependencies.
+Restart the `sbt ~run` process to reload the dependencies.
 
 In the body of the `app/views/index.scala.html` file add a place to display the tasks above the form:
 
@@ -592,7 +592,7 @@ In the `test/ApplicationTest.java` file, update the `indexTemplate` test method:
 
 Run the tests to make sure they still pass:
 
-    activator test
+    sbt test
 
 
 Load the app in your browser and verify it still works:  
