@@ -25,7 +25,7 @@ Create a new Play 2.3 application named "play2torial" by running:
 
     activator new play2torial play-java-2.3
 
-This will create a new project called `play2torial' in your current working directory using the play-java-2.3 template (look [here](https://www.lightbend.com/activator/templates) for more templates). Since the release of newer versions of the play framework, all versions of activator will try to use newer templates by default, so you'll have to specify the template manually to use an older version of Play.
+This will create a new project called `play2torial` in your current working directory using the play-java-2.3 template (look [here](https://www.lightbend.com/activator/templates) for more templates). Since the release of newer versions of the play framework, all versions of activator will try to use newer templates by default, so you'll have to specify the template manually to use an older version of Play.
 
 In the newly created `play2torial` directory create a new git repository by running:
 
