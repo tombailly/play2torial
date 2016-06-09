@@ -3,7 +3,7 @@
 
 This tutorial will help teach you how to build Java web applications with Play Framework 2.3.
 
-Before you get started you will need to install [git](http://git-scm.com/) and [Play 2.3](https://www.playframework.com/documentation/2.3.x/Installing). You will complete this by installing the Typesafe Activator tool.
+Before you get started you will need to install [git](http://git-scm.com/) and [Play Framework](https://playframework.com/documentation/). You will complete this by installing the Typesafe Activator tool.
 
 
 Test that the `activator` command works by running:
@@ -11,7 +11,7 @@ Test that the `activator` command works by running:
     activator -help
 
 
-You should see text displaying optional commands for the activator tool. If you do not, repeat the above process and make sure you are downloading the most recent version of Play (2.3.7).
+You should see text displaying optional commands for the activator tool. If you do not, repeat the above process and make sure you are downloading the most recent version of Play.
 
 
 Alright!  You are ready to go!
@@ -23,10 +23,9 @@ Create a Play App
 
 Create a new Play 2.3 application named "play2torial" by running:
 
-    activator new play2torial
+    activator new play2torial play-java-2.3
 
-When prompted select option 5 `play-java` to create a Java application.
-
+This will create a new project called `play2torial` in your current working directory using the play-java-2.3 template (look [here](https://www.lightbend.com/activator/templates) for more templates). Since the release of newer versions of the play framework, all versions of activator will try to use newer templates by default, so you'll have to specify the template manually to use an older version of Play.
 
 In the newly created `play2torial` directory create a new git repository by running:
 
@@ -42,17 +41,12 @@ git commit -m init
 
 Throughout this tutorial you will be able to check your progress against the official tutorial.  To do this add the official tutorial as a new git remote named `upstream` by running:
 
-    git remote add upstream https://github.com/jamesward/play2torial.git
+    git remote add upstream https://github.com/SocialFinance/play2torial.git
 
 
 Fetch the remote repository:
 
     git fetch upstream
-
-Note: Because the Play! folks have released a new version of Play (2.4) which is a radical change from the prior version (2.3), rather than trying to keep things in sync, we're 'faking' things by letting you sync up with the version of Play that we use at SoFi by
-making your project be identical to the version in the tutorial.
-
-    git reset --hard upstream/java-new_project
 
 
 From this point forward, you will no longer be using activator, and instead you will be using sbt.
