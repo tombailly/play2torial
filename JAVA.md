@@ -644,4 +644,4 @@ git diff upstream/java-validation
 Congratulations!
 ----------------
 
-You've built a Play 2.3 app and deployed it on the cloud.  You've learned how to get started with Play 2.3, Ebean, CoffeeScript, Twitter Bootstrap, jQuery, and RESTful JSON services.  Have fun as you continue to learn Play 2.3!
+You've built a Play 2.3 app and ran it locally.  You've also learned how to get started with Play 2.3, Ebean, CoffeeScript, Twitter Bootstrap, jQuery, and RESTful JSON services.  Have fun as you continue to learn Play 2.3!
