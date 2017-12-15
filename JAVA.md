@@ -3,16 +3,19 @@
 
 This tutorial will help teach you how to build Java web applications with Play Framework 2.3.
 
-Before you get started you will need to install [git](http://git-scm.com/) and [Play Framework](https://playframework.com/documentation/). You will complete this by installing the Typesafe Activator tool.
+Before you get started, you will need to install [java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), [git](http://git-scm.com/), [sbt](http://www.scala-sbt.org/download.html), and finally, and older version of the [Play Framework](https://downloads.typesafe.com/typesafe-activator/1.3.12/typesafe-activator-1.3.12.zip).
 
+Many of these install may require you to update your PATH, which is done
+differently in Windows or the Mac.  Those details are not provided in this
+tutorial.
 
 Test that the `activator` command works by running:
 
     activator -help
 
 
-You should see text displaying optional commands for the activator tool. If you do not, repeat the above process and make sure you are downloading the most recent version of Play.
-
+You should see text displaying optional commands for the activator tool. If you do not, ensure you have that the downloaded activator script referenced in your
+PATH.
 
 Alright!  You are ready to go!
 
