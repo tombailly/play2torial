@@ -466,7 +466,7 @@ After adding a new `Task` load the following URL in your browser:
 [http://localhost:9000/tasks](http://localhost:9000/tasks)
 
 
-Verify that you see a Task (or Tasks) in JSON form.  If the `contents` property in the JSON is null, then stop the `activator ~run` process, run `sbt clean` and then run the app again: `sbt ~run`
+Verify that you see a Task (or Tasks) in JSON form.  If the `contents` property in the JSON is null, then stop the `sbt run` process, run `sbt clean` and then run the app again: `sbt run`
 
 
 Commit and verify your changes:
@@ -487,7 +487,7 @@ Add the jQuery WebJar to your project by adding the following to your `build.sbt
 
 Note: Make sure you have an empty line before the line above.
 
-Restart the `sbt ~run` process to reload the dependencies.
+Restart the `sbt run` process to reload the dependencies.
 
 In the body of the `app/views/index.scala.html` file add a place to display the tasks above the form:
 
