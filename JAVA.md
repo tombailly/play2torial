@@ -480,9 +480,9 @@ git diff upstream/java-task_json
 Display the Tasks via CoffeeScript and jQuery
 ---------------------------------------------
 
-Add the jQuery WebJar to your project by adding the following to your `build.sbt` file:
+Add the jQuery WebJar to your project by adding the following to your
+`build.sbt` file after the first libraryDependencies declaration.
 
-     
     libraryDependencies += "org.webjars" % "jquery" % "1.11.2"
 
 Note: Make sure you have an empty line before the line above.
