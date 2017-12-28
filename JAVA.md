@@ -574,7 +574,7 @@ Update the `app/views/index.scala.html` file to use Bootstrap for a nice header,
 @(message: String, taskForm: Form[Task])
 @implicitFieldConstructor = @{ helper.FieldConstructor(twitterBootstrapInput.render) }
     
-@main("Welcome to Play 2.0") {
+@main("Welcome to Play") {
     
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
