@@ -606,7 +606,7 @@ The template now takes a second parameter that is a `Form[Task]` and must be pas
     }
 ```
 
-In the `test/ApplicationTest.java` file, update the `indexTemplate` test method:
+In the `test/ApplicationTest.java` file, update the `renderTemplate` test method:
 
 ```java
         Content html = views.html.index.render("HELLO, WORLD", play.data.Form.form(models.Task.class));
