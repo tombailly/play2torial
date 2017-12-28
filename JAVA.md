@@ -317,7 +317,7 @@ git diff upstream/java-hello_view
 Create a Model
 --------------
 
-By default, Play 2.3 with Java uses [Ebean](http://www.avaje.org/) for RDBMS persistence.  To setup a data source, edit the `conf/application.conf` file and uncomment these lines:
+By default, Play 2.3 with Java uses [Ebean](https://ebean-orm.github.io/) for RDBMS persistence.  To setup a data source, edit the `conf/application.conf` file and uncomment these lines:
 
 ```properties
 db.default.driver=org.h2.Driver
