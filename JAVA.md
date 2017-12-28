@@ -75,12 +75,37 @@ Start the Play Server
 
 Now start the Play app by running:
 
-    sbt ~run
+    sbt run
 
 Open the following URL in your browser to verify the app is working:  
 [http://localhost:9000/](http://localhost:9000/)
 
 _Read more about the [Play Console](https://www.playframework.com/documentation/2.3.x/PlayConsole)_
+
+Old Play Framework issues
+-------------------------
+Because this tutorial is based on an older version of Play, there are potential
+issues that must be worked-around.  In the file 'build.sbt' in your project,
+please append the following line to the bottom of the file.
+
+```
+PlayKeys.playWatchService := play.sbtplugin.run.PlayWatchService.sbt(pollInterval.value)
+```
+
+Otherwise, you will see errors such as the following when you run the
+application.
+```
+java.lang.UnsatisfiedLinkError: no jnotify in java.library.path
+        at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+...
+```
+
+Commit your changes to build.sbt:
+```sh
+git add build.sbt
+git commit -m "Fixed JNotify issues"
+```
+
 
 Routes
 ------
