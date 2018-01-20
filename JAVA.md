@@ -104,6 +104,7 @@ Commit your changes to build.sbt:
 ```sh
 git add build.sbt
 git commit -m "Fixed JNotify issues"
+git diff java-fixed_jnotify
 ```
 
 
@@ -133,7 +134,7 @@ Commit and verify your changes:
 
 ```sh
 git commit -am "added new route"
-git diff upstream/java-foo_route
+git diff java-foo_route
 ```
 
 
@@ -178,7 +179,7 @@ Commit and verify your changes:
 ```sh
 git add test
 git commit -m "added test for foo route"
-git diff upstream/java-test_route
+git diff java-test_route
 ```
 
 
@@ -208,7 +209,7 @@ To verify the tests pass, run:
 Commit and verify that your changes:
 
     git commit -am "updated controller"
-    git diff upstream/java-hello_controller
+    git diff java-hello_controller
 
 
 
@@ -243,8 +244,8 @@ Commit and verify that your changes:
 
 ```sh
 git add test/ApplicationTest.java
-git commit -am "added Application controller test"
-git diff upstream/java-test_controller
+git commit -m "added Application controller test"
+git diff java-test_controller
 ```
 
 
@@ -310,7 +311,7 @@ Commit and verify that your changes:
 
 ```sh
 git commit -am "change the view"
-git diff upstream/java-hello_view
+git diff java-hello_view
 ```
 
 
@@ -391,8 +392,8 @@ Commit and verify your changes:
 
 ```sh
 git add conf/evolutions app/models/Task.java test/TaskTest.java
-git commit -am "added Task model, in-memory database config, and test"
-git diff upstream/java-task_model
+git commit -m "added Task model, in-memory database config, and test"
+git diff java-task_model
 ```
 
 
@@ -441,7 +442,7 @@ Commit and verify your changes:
 
 ```sh
 git commit -am "add new UI to create Tasks"
-git diff upstream/java-task_add
+git diff java-task_add
 ```
 
 
@@ -473,7 +474,7 @@ Commit and verify your changes:
 
 ```sh
 git commit -am "get the tasks as JSON"
-git diff upstream/java-task_json
+git diff java-task_json
 ```
 
 
@@ -523,8 +524,8 @@ Commit and verify your changes:
 
 ```sh
 git add app/views/index.scala.html app/assets/javascripts/index.coffee app/views/main.scala.html
-git commit -am "Display the list of tasks using jQuery and CoffeeScript"
-git diff upstream/java-task_coffeescript
+git commit -m "Display the list of tasks using jQuery and CoffeeScript"
+git diff java-task_coffeescript
 ```
 
 
@@ -626,8 +627,8 @@ Commit and verify your changes:
 
 ```bash
 git add app/views/twitterBootstrapInput.scala.html
-git commit -am "Add Bootstrap"
-git diff upstream/java-bootstrap
+git commit -m "Add Bootstrap"
+git diff java-bootstrap
 ```
 
 
@@ -666,7 +667,7 @@ Commit and verify your changes:
 
 ```sh
 git commit -am "Add validation"
-git diff upstream/java-validation
+git diff java-validation
 ```
 
 Congratulations!
