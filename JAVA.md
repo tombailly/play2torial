@@ -133,7 +133,8 @@ _Read more about [Routing](https://www.playframework.com/documentation/2.3.x/Jav
 Commit and verify your changes:
 
 ```sh
-git commit -am "added new route"
+git add conf/routes
+git commit -m "added new route"
 git diff java-foo_route
 ```
 
@@ -391,7 +392,7 @@ _Read more about [EBean ORM Models](https://www.playframework.com/documentation/
 Commit and verify your changes:
 
 ```sh
-git add conf/evolutions app/models/Task.java test/TaskTest.java
+git add conf/evolutions conf/application.conf app/models/Task.java test/TaskTest.java
 git commit -m "added Task model, in-memory database config, and test"
 git diff java-task_model
 ```
