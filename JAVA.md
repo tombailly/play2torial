@@ -104,7 +104,7 @@ Commit your changes to build.sbt:
 ```sh
 git add build.sbt
 git commit -m "Fixed JNotify issues"
-git diff java-fixed_jnotify
+git diff java-jnotify_fix
 ```
 
 
